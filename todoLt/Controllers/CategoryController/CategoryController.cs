@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace todoLt.Controllers;
 
@@ -10,7 +11,7 @@ public class CategoryController
 {
     public IActionResult Index()
     {
-        return ViewResult(Controller);
+        return View(CategoryController);
     }
 
     public IActionResult creat(Controller Category)
@@ -42,6 +43,5 @@ public class CategoryController
 
         return RedirectToActionResult("Index");
     }
-}
-}
+
 }
